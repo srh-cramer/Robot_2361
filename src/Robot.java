@@ -14,6 +14,15 @@ public class Robot {
         this.batteryPower = 100;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    // eher schlechte Praxis
     public void sayName(){
         System.out.println("Hi, my name is " + this.name + "!");
     }

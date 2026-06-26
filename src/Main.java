@@ -3,14 +3,15 @@
 public class Main {
     public static void main(String[] args) {
         Robot myRobot = new Robot("R2D2", 100, "blau");
-        //System.out.println(myRobot);
-        // myRobot.sayName();
+        String robotName = myRobot.getName();
+        System.out.println("Mein Roboter heißt " + robotName);
+
+        myRobot.setName("Dalek");
+        System.out.println("Mein Roboter heißt " + myRobot.getName());
+
+
 
         Robot secondRobot = new Robot("Wall-E", 60, "gelb");
-//        System.out.println(secondRobot);
-//        secondRobot.sayName();
-//        System.out.println(secondRobot.losePower());
-//        System.out.println(secondRobot.losePower());
-        System.out.println(myRobot.calculateBMI(80,180));
+        //System.out.println(myRobot.calculateBMI(80,180));
     }
 }
