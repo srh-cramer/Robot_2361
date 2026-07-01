@@ -3,10 +3,16 @@
 public class Main {
     public static void main(String[] args) {
         Robot myRobot = new Robot("R2D2", 100, "blau");
+        Robot c3po = new Robot("C3PO", 170, "Gold", 1977);
+
+        System.out.println(myRobot.getBuildYear());
+        System.out.println(c3po.getBuildYear());
+
+        //String name = myRobot.name;
         String robotName = myRobot.getName();
         System.out.println("Mein Roboter heißt " + robotName);
 
-        myRobot.setName("");
+        myRobot.setName("  ");
         System.out.println("Mein Roboter heißt " + myRobot.getName());
 
         int robotHeight = myRobot.getHeight();

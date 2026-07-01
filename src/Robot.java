@@ -5,6 +5,25 @@ public class Robot {
     private String color;
     private int batteryPower;
 
+    // Konstruktor-Methode
+    // legt fest, was beim Instanziieren eines Objektes passieren soll
+    public Robot(String newName, int newHeight, String color){
+        this.name = newName;
+        this.height = newHeight;
+        this.buildYear = 2026;
+        this.color = color;
+        this.batteryPower = 100;
+    }
+
+    //neuer Konstruktor, wo buildYear als Parameter mitgegeben wird
+    public Robot(String newName, int newHeight, String color, int newBuildYear){
+        this.name = newName;
+        this.height = newHeight;
+        this.buildYear = newBuildYear;
+        this.color = color;
+        this.batteryPower = 100;
+    }
+
     public int getBuildYear() {
         return buildYear;
     }
@@ -26,16 +45,12 @@ public class Robot {
     }
 
     public void setBatteryPower(int batteryPower) {
-        this.batteryPower = batteryPower;
-    }
-
-    // Konstruktor-Methode
-    public Robot(String newName, int newHeight, String color){
-        this.name = newName;
-        this.height = newHeight;
-        this.buildYear = 2026;
-        this.color = color;
-        this.batteryPower = 100;
+        if (batteryPower >= 0){
+            this.batteryPower = batteryPower;
+        }
+        else{
+            System.err.println("BatteryPower kann nicht unter 0 fallen.");
+        }
     }
 
     public String getName(){
@@ -46,7 +61,7 @@ public class Robot {
         // stelle sicher, dass neuer Name nicht leer ist
         // Tipp: String-Methode .isEmpty() benutzen
         // Tipp 2: if-Abfrage einbauen!
-        if (!name.isEmpty()){
+        if (!name.isBlank()){
             this.name = name;
         }
         else {
