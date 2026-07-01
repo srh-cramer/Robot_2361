@@ -6,10 +6,14 @@ public class Main {
         String robotName = myRobot.getName();
         System.out.println("Mein Roboter heißt " + robotName);
 
-        myRobot.setName("Dalek");
+        myRobot.setName("");
         System.out.println("Mein Roboter heißt " + myRobot.getName());
 
+        int robotHeight = myRobot.getHeight();
+        System.out.println("Mein Roboter ist " + robotHeight + " cm groß.");
 
+        myRobot.setHeight(150);
+        System.out.println("Neue Größe vom Roboter: " + myRobot.getHeight());
 
         Robot secondRobot = new Robot("Wall-E", 60, "gelb");
         //System.out.println(myRobot.calculateBMI(80,180));

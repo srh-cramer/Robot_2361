@@ -5,6 +5,30 @@ public class Robot {
     private String color;
     private int batteryPower;
 
+    public int getBuildYear() {
+        return buildYear;
+    }
+
+    public void setBuildYear(int buildYear){
+        this.buildYear = buildYear;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getBatteryPower() {
+        return batteryPower;
+    }
+
+    public void setBatteryPower(int batteryPower) {
+        this.batteryPower = batteryPower;
+    }
+
     // Konstruktor-Methode
     public Robot(String newName, int newHeight, String color){
         this.name = newName;
@@ -19,7 +43,23 @@ public class Robot {
     }
 
     public void setName(String name){
-        this.name = name;
+        // stelle sicher, dass neuer Name nicht leer ist
+        // Tipp: String-Methode .isEmpty() benutzen
+        // Tipp 2: if-Abfrage einbauen!
+        if (!name.isEmpty()){
+            this.name = name;
+        }
+        else {
+            System.err.println("Fehler: Name fehlt.");
+        }
+    }
+
+    public int getHeight(){
+        return this.height;
+    }
+
+    public void setHeight(int height){
+        this.height = height;
     }
 
     // eher schlechte Praxis
